@@ -3,6 +3,14 @@
 */
 #include <stdio.h>
 
+// в зависимости от скорости выбираем радиус поворота нижней платформы
+int radbottom (int s){
+    if (s <= 5)
+        printf("установлен режим 1\n");
+    else
+        printf("установлен режим 2\n");
+}
+
 int main()
 {
     int speed; // базовая скорость 
@@ -11,11 +19,7 @@ int main()
     
     printf("задайте скорость\n");
     scanf("%2u", &speed);
-    
-    if (speed <= 5)
-        printf("установлен режим 1\n");
-    else
-        printf("установлен режим 2\n");
+    radbottom(speed);
     
     return 0;
 }
